@@ -52,6 +52,21 @@ matrix:
     - os: linux
       arch: arm64
       env: JOB_TYPE=compile_and_unit_test_asan
+    - os: linux
+      arch: arm64
+      sudo: required
+      env: JOB_TYPE=valgrind_health_check
+    - os: linux
+      arch; arm64
+      env: JOB_TYPE=compile_and_unit_test COVERAGE=no
+      compiler: clang
+    - os: linux
+      arch: arm64
+      sudo: required
+      env: JOB_TYPE=acceptance_tests_common
+      # The unsafe acceptance tests don't work with SIMFS which is the default
+      # filesystem in Travis; so change OS to Trusty, which uses ext4.
+    
     
 
 before_install:
