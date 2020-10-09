@@ -48,7 +48,7 @@ matrix:
       env: JOB_TYPE=serverd_multi_versions COVERAGE=no
     - os: osx
       env: JOB_TYPE=compile_only COVERAGE=no
-      sudo: false\
+      sudo: false
     
     - os: linux
       arch: arm64
