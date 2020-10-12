@@ -34,6 +34,7 @@ then
     # gmake --debug -C tests/unit check
     exit
 else
+    sudo apt-get install -y dh-autoreconf
     NO_CONFIGURE=1 ./autogen.sh
     ./configure --enable-debug --prefix=$INSTDIR --with-systemd-service --bindir=$INSTDIR/var/cfengine/bin \
         `[ "x$COVERAGE" != xno ] && echo --enable-coverage`
