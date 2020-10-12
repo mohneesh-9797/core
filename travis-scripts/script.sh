@@ -35,6 +35,7 @@ then
     exit
 else
     sudo apt-get install -y dh-autoreconf
+    sudo apt-get install libpcre3 libpcre3-dev
     NO_CONFIGURE=1 ./autogen.sh
     ./configure --enable-debug --prefix=$INSTDIR --with-systemd-service --bindir=$INSTDIR/var/cfengine/bin \
         `[ "x$COVERAGE" != xno ] && echo --enable-coverage`
