@@ -19,7 +19,7 @@ if [ ! -d masterfiles ]; then
 fi
 
 echo "Checking for systemctl"
-systemctl --version\
+systemctl --version
 sudo apt-get install -y dh-autoreconf libpcre3 libpcre3-dev flex
 cd core/
 echo "Building CFEngine core"
