@@ -4,7 +4,7 @@ set -e
 if [ -d /var/cfengine ]; then
     rm -rf /var/cfengine
 fi
-
+sudo apt-get install -y flex dh-autoreconf libpcre3 libpcre3-dev
 # Test assumes we start in core or masterfiles directory
 cd ../
 
@@ -19,8 +19,8 @@ if [ ! -d masterfiles ]; then
 fi
 
 echo "Checking for systemctl"
-systemctl --version
-
+systemctl --version\
+sudo apt-get install -y dh-autoreconf libpcre3 libpcre3-dev flex
 cd core/
 echo "Building CFEngine core"
 set +e
