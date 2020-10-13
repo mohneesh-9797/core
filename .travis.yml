@@ -52,6 +52,10 @@ matrix:
     - os: linux
       arch: arm64
       env: JOB_TYPE=compile_and_unit_test_asan
+    - dist: focal
+      os: linux
+      arch: arm64
+      env: JOB_TYPE=compile_and_unit_test_asan
     - os: linux
       arch: arm64
       sudo: required
