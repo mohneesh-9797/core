@@ -53,7 +53,7 @@ matrix:
     - os: linux
       arch: arm64
       env: JOB_TYPE=compile_and_unit_test_asan
-      script: find / -name param.h
+      script: cat /usr/include/aarch64-linux-gnu/sys/param.h
     - os: linux
       arch: arm64
       env: JOB_TYPE=compile_and_unit_test_asan
