@@ -57,7 +57,7 @@ then
     exit
 elif [ "$JOB_TYPE" = compile_and_unit_test_asan ]
 then
-    make CFLAGS="-Werror -Wall -fsanitize=address" LDFLAGS="-fsanitize=address"
+    make CFLAGS="-Werror  -Wno-error=format-truncation -Wall -fsanitize=address" LDFLAGS="-fsanitize=address"
     make -C tests/unit CFLAGS="-fsanitize=address" LDFLAGS="-fsanitize=address" check
     make -C tests/load CFLAGS="-fsanitize=address" LDFLAGS="-fsanitize=address" check
     exit
