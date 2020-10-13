@@ -4,7 +4,7 @@ set -e
 if [ -d /var/cfengine ]; then
     rm -rf /var/cfengine
 fi
-sudo apt-get install -y flex dh-autoreconf libpcre3 libpcre3-dev
+sudo apt-get install -y flex dh-autoreconf libpcre3 libpcre3-dev net-tools
 # Test assumes we start in core or masterfiles directory
 cd ../
 
