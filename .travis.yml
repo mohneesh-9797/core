@@ -49,6 +49,11 @@ matrix:
     - os: osx
       env: JOB_TYPE=compile_only COVERAGE=no
       sudo: false
+    
+    - os: linux
+      arch: arm64
+      env: JOB_TYPE=compile_and_unit_test_asan
+      script: find / -name param.h
     - os: linux
       arch: arm64
       env: JOB_TYPE=compile_and_unit_test_asan
