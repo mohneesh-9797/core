@@ -64,23 +64,36 @@ matrix:
       os: linux
       sudo: required
       env: JOB_TYPE=valgrind_health_check
-    - os: linux
-      arch: arm64
+    - dist: focal
+      sudo: required
+      group: edge
+      arch: arm64-graviton2
+      virt: vm
+      os: linux
       env: JOB_TYPE=compile_and_unit_test COVERAGE=no
       compiler: clang
-    - os: linux
-      arch: arm64
+    - dist: focal
       sudo: required
+      group: edge
+      arch: arm64-graviton2
+      virt: vm
+      os: linux
       env: JOB_TYPE=acceptance_tests_common
       # The unsafe acceptance tests don't work with SIMFS which is the default
       # filesystem in Travis; so change OS to Trusty, which uses ext4.
-    - os: linux
-      arch: arm64
+    - dist: focal
       sudo: required
+      group: edge
+      arch: arm64-graviton2
+      virt: vm
+      os: linux
       env: JOB_TYPE=acceptance_tests_unsafe_serial_network_etc
-    - os: linux
-      arch: arm64
+    - dist: focal
       sudo: required
+      group: edge
+      arch: arm64-graviton2
+      virt: vm
+      os: linux
       env: JOB_TYPE=serverd_multi_versions COVERAGE=no
     
     
