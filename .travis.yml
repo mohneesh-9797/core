@@ -55,6 +55,16 @@ matrix:
       arch: arm64-graviton2
       virt: vm
       os: linux
+      install: ./autogen.sh && make -j4 
+      script: 
+        - make install
+        - make check
+    - dist: focal
+      sudo: required
+      group: edge
+      arch: arm64-graviton2
+      virt: vm
+      os: linux
       env: JOB_TYPE=compile_and_unit_test_asan
     - dist: focal
       sudo: required
