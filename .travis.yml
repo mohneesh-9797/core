@@ -49,6 +49,16 @@ matrix:
     - os: osx
       env: JOB_TYPE=compile_only COVERAGE=no
       sudo: false
+    - arch: amd64
+      dist: focal
+      sudo: required
+      os: linux
+      install: 
+        - sudo apt-get install -y flex
+        - ./autogen.sh && make -j4 
+      script: 
+        - make install
+        - make check  
     - dist: focal
       sudo: required
       group: edge
