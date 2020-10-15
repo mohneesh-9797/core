@@ -68,9 +68,8 @@ matrix:
       install: 
         - sudo apt-get install -y flex
         - ./autogen.sh && make -j4 
-      script: 
         - sudo make install
-        - sudo make check
+      script: sudo make check
     - dist: focal
       sudo: required
       group: edge
